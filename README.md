@@ -1,2 +1,3 @@
-# COVID-19-Flask-App-Tracker
-Flask Restful Api which would return number of confirmed, deaths and recovered cases with a GET using publicly available data.
+# Flask-App
+
+Simple example on how to build a Flask Api with error handling, exception handling and logging using rotating file handler.
