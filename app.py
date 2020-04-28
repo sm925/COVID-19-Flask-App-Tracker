@@ -1,6 +1,12 @@
+# Using flask to make an api
+# import necessary libraries and functions
 import traceback
-from flask import Flask
-from flask_restful import Resource, Api
+from logging.handlers import RotatingFileHandler
+from time import strftime
+from flask import Flask, jsonify, request
+import socket
+from waitress import serve
+import logging
 
 app = Flask(__name__)
 api = Api(app)
