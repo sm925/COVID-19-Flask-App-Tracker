@@ -8,14 +8,15 @@ import socket
 from waitress import serve
 import logging
 
+
+# creating a flask app
 app = Flask(__name__)
-api = Api(app)
 
-class HelloWorld(Resource):
-    def get(self):
-        return {'hello': 'world'}
 
-api.add_resource(HelloWorld, '/')
+# expose a get endpoint 
+@app.route('/hello_world', methods=['GET'])
+def hello_world():
+    return jsonify(response='Hello World!')
 
 if __name__ == '__main__':
     app.run(debug=True)
