@@ -56,4 +56,4 @@ if __name__ == '__main__':
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.ERROR)
     logger.addHandler(handler)
-    app.run(host="127.0.0.1",port=8000)
+    serve(app, host=socket.gethostbyname(socket.gethostname()), port=8000)
